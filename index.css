@@ -15,6 +15,7 @@
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
 li {
@@ -67,13 +68,13 @@ header ul li {
   display: inline-block;
   font-size: 2rem;
   margin: 0 6rem;
+  padding: 0.6rem;
   color: #fff;
 }
 
 header ul li:hover {
   background-color: #fff;
   color: var(--main-color1);
-  /* padding: 0.6rem; */
   cursor: pointer;
   border-radius: 12%;
 }
@@ -207,11 +208,61 @@ section {
 
 .graph .current {
   background-color: coral;
-  height: 20rem;
-  animation: bar 2s linear;
+  /* height: 20rem; */
 }
 
-@keyframes bar {
+
+.g1 {
+  height: 30rem;
+  animation: bar1 2s linear;
+}
+
+@keyframes bar1 {
+  from {
+    height: 0rem;
+  }
+
+  to {
+    height: 30rem;
+  }
+}
+
+.g2 {
+  height: 24rem;
+  animation: bar2 2s linear;
+}
+
+@keyframes bar2 {
+  from {
+    height: 0rem;
+  }
+
+  to {
+    height: 24rem;
+  }
+}
+
+.g3 {
+  height: 10rem;
+  animation: bar3 2s linear;
+}
+
+@keyframes bar3 {
+  from {
+    height: 0rem;
+  }
+
+  to {
+    height: 10rem;
+  }
+}
+
+.g4 {
+  height: 20rem;
+  animation: bar4 2s linear;
+}
+
+@keyframes bar4 {
   from {
     height: 0rem;
   }
@@ -285,7 +336,12 @@ section {
   background-image: url(images/keyboard.jpeg);
 }
 
-.interests p {}
+.interests p {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 1.2rem 1.2rem 0;
+}
 
 /* footer */
 #footer {
