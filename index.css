@@ -1,0 +1,317 @@
+/* css 초기 설정 : https://blog.pumpkin-raccoon.com/72(참고 블로그) */
+:root {
+  --main-color1: #8294C4;
+  --main-color2: #ACB1D6;
+  --main-color3: #DBDFEA;
+  --main-color4: #FFEAD2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+input:focus {
+  border: none;
+}
+
+button {
+  background-color: none;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  outline: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 320px;
+  /* width: 100vw;
+  height: 100vh; */
+}
+
+#container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header > nav */
+header {
+  position: fixed;
+  width: 100%;
+  height: 6rem;
+  background-color: var(--main-color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 999;
+}
+
+header ul li {
+  display: inline-block;
+  font-size: 2rem;
+  margin: 0 6rem;
+  color: #fff;
+}
+
+header ul li:hover {
+  background-color: #fff;
+  color: var(--main-color1);
+  /* padding: 0.6rem; */
+  cursor: pointer;
+  border-radius: 12%;
+}
+
+section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  /* height:60rem; */
+  /* padding: 100px 20px 0; */
+  /* background-color: blue; */
+}
+
+/* home */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--main-color3); */
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container h3 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.home-container>.btn {
+  margin-top: 4rem;
+  background-color: var(--main-color3);
+  border: solid 4px var(--main-color2);
+  border-radius: 24%;
+  font-size: 2.4rem;
+  padding: 0.4rem 0.6rem;
+}
+
+.home-container>.btn:active {
+  background-color: var(--main-color2);
+  color: #fff;
+}
+
+/* me */
+.my-container {
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--main-color3); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile {
+  border: 8px solid var(--main-color4);
+  border-radius: 50%;
+  width: 30rem;
+  height: 40rem;
+  display: flex;
+  background-image: url(images/me.jpeg);
+  background-size: cover;
+  /* background-color: src(); */
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.my-container p {
+  position: absolute;
+  font-size: 1.8rem;
+}
+
+.my-container p.ex1 {
+  top: 20rem;
+  left: 18rem;
+}
+
+.my-container p.ex2 {
+  top: 14rem;
+  right: 10rem;
+}
+
+.my-container p.ex3 {
+  bottom: 10rem;
+  left: 16rem;
+}
+
+.my-container p.ex4 {
+  bottom: 17rem;
+  right: 10rem;
+}
+
+/* skill */
+.skills-container {
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-color3);
+  display: flex;
+  /* justify-content: flex-end; */
+  /* align-items: flex-start; */
+}
+
+.graph {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.graph-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+.graph-img>p {
+  margin: 0 1rem;
+
+  width: 4rem;
+  border-radius: 2rem 2rem 0 0;
+}
+
+.graph .current {
+  background-color: coral;
+  height: 20rem;
+  animation: bar 2s linear;
+}
+
+@keyframes bar {
+  from {
+    height: 0rem;
+  }
+
+  to {
+    height: 20rem;
+  }
+}
+
+.graph .future {
+  background-color: cornflowerblue;
+  height: 70%;
+}
+
+.graph-text {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+/* interest */
+.interests-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: var(--main-color2); */
+
+}
+
+.interests-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4rem 8rem;
+  /* row-gap: 2rem;
+  column-gap: 4rem; */
+}
+
+.interests {
+  display: flex;
+  border: solid 1rem var(--main-color4);
+  width: 28rem;
+  height: 28rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.7;
+}
+
+.interests:hover {
+  opacity: 1;
+}
+
+.cat {
+  background-image: url('images/cat.jpeg');
+}
+
+.k-pop {
+  background-image: url('images/haneul.jpeg');
+}
+
+.music {
+  background-image: url(images/music.jpeg);
+}
+
+.keyboard {
+  background-image: url(images/keyboard.jpeg);
+}
+
+.interests p {}
+
+/* footer */
+#footer {
+  width: 100%;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--main-color2);
+}
+
+
+.item {
+  margin: 0 3rem;
+  color: #fff;
+  /* font-weight: bold; */
+  font-size: 1.4rem;
+  /* margin-bottom: 10px; */
+}
+
+.item p {
+  /* margin: 0; */
+}
+
+/* 
+.item a {
+  color: blue;
+  text-decoration: underline;
+} */
