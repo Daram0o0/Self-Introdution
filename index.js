@@ -57,4 +57,21 @@ function restoreWord(element, key) {
 
 // skill section animation
 // 원래 section("#skill")에 도착하면 애니메이션이 사작되게 하고 싶었으나, 하지 못함
+const g1 = document.querySelectorAll(".graph-img p")[0];
+const g2 = document.querySelectorAll(".graph-img p")[2];
+const g3 = document.querySelectorAll(".graph-img p")[4];
+const g4 = document.querySelectorAll(".graph-img p")[6];
+window.addEventListener("scroll", (e) => {
 
+  if (scrollY >= 1392) {
+    g1.classList.add("g1");
+    g2.classList.add("g2");
+    g3.classList.add("g3");
+    g4.classList.add("g4");
+  } else {
+    g1.classList.remove("g1");
+    g2.classList.remove("g2");
+    g3.classList.remove("g3");
+    g4.classList.remove("g4");
+  }
+});
